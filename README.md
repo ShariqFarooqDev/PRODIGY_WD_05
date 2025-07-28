@@ -34,11 +34,11 @@ To run this project locally, you will need to provide your own API keys for both
 
 1.  **Clone the Repository**:
     ```bash
-    git clone [https://github.com/your-username/ai-weather-app.git](https://github.com/your-username/ai-weather-app.git)
+    git clone https://github.com/ShariqFarooqDev/PRODIGY_WD_05.git
     ```
 2.  **Navigate to the Directory**:
     ```bash
-    cd ai-weather-app
+    cd PRODIGY_WD_05
     ```
 3.  **Add API Keys**:
     * Open the `script.js` file.
