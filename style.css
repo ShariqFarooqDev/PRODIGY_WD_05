@@ -1,0 +1,31 @@
+body {
+            font-family: 'Inter', sans-serif;
+            /* Smooth transition for the background gradient */
+            transition: background 1s ease-in-out;
+        }
+        .weather-card {
+            backdrop-filter: blur(12px) saturate(180%);
+            -webkit-backdrop-filter: blur(12px) saturate(180%);
+            background-color: rgba(10, 20, 40, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            transition: all 0.3s ease;
+        }
+        .search-btn {
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+        }
+        .location-btn {
+             background: linear-gradient(90deg, #4f46e5, #818cf8);
+        }
+        .gemini-btn {
+             background: linear-gradient(90deg, #6d28d9, #a78bfa);
+        }
+        #geminiSummary p {
+            margin-bottom: 0.5rem;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }

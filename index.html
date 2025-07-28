@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Weather App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex items-center justify-center min-h-screen text-white p-4">
+
+    <div class="w-full max-w-md mx-auto">
+        <!-- Header -->
+        <div class="mb-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold text-white text-shadow-lg">AI Weather App</h2>
+        </div>
+
+        <div class="weather-card rounded-xl p-6 md:p-8 shadow-2xl">
+            <!-- Search -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                <input type="text" id="cityInput" class="w-full px-4 py-3 bg-gray-800/80 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white" placeholder="Enter city name...">
+                <button id="searchBtn" class="search-btn text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity duration-300 w-full sm:w-auto flex items-center justify-center gap-2">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <div class="text-center my-4 text-gray-400">or</div>
+            <button id="locationBtn" class="location-btn w-full text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity duration-300 mb-6 flex items-center justify-center gap-2">
+                <i class="fas fa-map-marker-alt"></i> Use My Location
+            </button>
+
+            <!-- Loader / Error / Content -->
+            <div id="loader" class="text-center p-8 hidden"><i class="fas fa-spinner fa-spin fa-3x"></i><p class="mt-2 text-lg">Fetching weather...</p></div>
+            <div id="errorDisplay" class="text-center text-red-400 p-4 bg-red-900/50 rounded-lg hidden fade-in"><p id="errorMessage"></p></div>
+            
+            <!-- Weather & AI Display -->
+            <div id="weatherDisplay" class="text-center hidden fade-in">
+                <div id="weatherContent">
+                    <h2 id="cityName" class="text-3xl font-bold mb-2"></h2>
+                    <div class="flex items-center justify-center mb-4">
+                        <img id="weatherIcon" src="" alt="Weather Icon" class="w-20 h-20">
+                        <p id="temperature" class="text-5xl font-bold ml-4"></p>
+                    </div>
+                    <p id="description" class="text-xl capitalize mb-6"></p>
+
+                    <div class="grid grid-cols-2 gap-4 text-left bg-gray-900/50 rounded-lg p-4 mb-6">
+                        <div><p class="font-semibold"><i class="fas fa-tint mr-2 text-blue-300"></i>Humidity</p><p id="humidity" class="text-lg"></p></div>
+                        <div><p class="font-semibold"><i class="fas fa-wind mr-2 text-gray-300"></i>Wind Speed</p><p id="windSpeed" class="text-lg"></p></div>
+                        <div><p class="font-semibold"><i class="fas fa-eye mr-2 text-green-300"></i>Visibility</p><p id="visibility" class="text-lg"></p></div>
+                        <div><p class="font-semibold"><i class="fas fa-compress-arrows-alt mr-2 text-purple-300"></i>Pressure</p><p id="pressure" class="text-lg"></p></div>
+                    </div>
+                </div>
+
+                <!-- Gemini AI Summary Section -->
+                <div id="geminiSection" class="mt-6">
+                     <button id="geminiBtn" class="gemini-btn w-full text-white font-bold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity duration-300 mb-4 flex items-center justify-center gap-2">
+                        <i class="fas fa-robot"></i> Get AI Summary
+                    </button>
+                    <div id="geminiLoader" class="text-center p-4 hidden"><i class="fas fa-sync fa-spin fa-2x"></i><p class="mt-2">AI is thinking...</p></div>
+                    <div id="geminiSummary" class="bg-gray-900/60 rounded-lg p-4 text-left hidden fade-in"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
