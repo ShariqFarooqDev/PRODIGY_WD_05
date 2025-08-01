@@ -1,4 +1,4 @@
-# AI Weather App
+# PRODIGY_WD_05 - AI Weather App
 
 An intelligent and visually appealing weather forecast application that provides real-time weather data and generates a helpful, AI-powered summary. This project demonstrates the integration of multiple third-party APIs, asynchronous JavaScript for data fetching, and a modern, responsive user interface built with Tailwind CSS.
 
