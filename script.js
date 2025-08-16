@@ -1,5 +1,5 @@
-const WEATHER_API_KEY = 'YOUR_WEATHER_API_KEY_HERE'; // WeatherAPI.com Key
-        const GEMINI_API_KEY = 'YOUR_GEMINI_API_KEY_HERE'; // Get your key from Google AI Studio
+const WEATHER_API_KEY = '172362b4153546e1a6f174422252807'; // WeatherAPI.com Key
+        const GEMINI_API_KEY = 'AIzaSyAHErYqd6cu-BeIbFuDdhVO0C2XepQFNuk'; // Get your key from Google AI Studio
 
         let currentWeatherData = null;
 
